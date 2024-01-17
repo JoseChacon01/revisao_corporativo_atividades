@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro de Curso</h1>
+
+<form method="post">
+    {% csrf_token %} <!--O Django possui uma etiqueta percentual de token csrf por cento que é usada para evitar ataques maliciosos. Ao gerar a página no servidor, ela gera um token e garante que quaisquer solicitações que voltem são cruzadas contra este token. O token não está incluído nas solicitações recebidas; assim, eles não são executados.-->
+    <p>{{form.nome.label}}: {{form.nome}} </p>
+    <p>{{form.data_inicio.label}}: {{form.data_inicio}} </p>
+    <p>{{form.vagas.label}}: {{form.vagas}} </p>
+    <p>{{form.area.label}}: {{form.area}} </p> <!--Adicionado-->
+    <p>{{form.publicos.label}}: {{form.publicos}} </p> <!--Adicionado-->
+    <button type="submit">Salvar</button>
+</form>
+
+</body>
+</html>

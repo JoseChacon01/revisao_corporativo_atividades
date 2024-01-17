@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/perfil_estilo.css' %}">
+</head>
+<body>
+    {% block conteudo %}
+
+    <p>
+        <img src="{% static 'imagens/perfil.jpeg' %}" alt="Foto de perfil" width="200" class="img-fluid">  
+    </p>
+    <h1>José Chacon</h1>
+    <p>Possui curso profissionalizante em "assistente administrativo" pelo Centro Brasileiro de Cursos (CEBRAC),
+         realizou um estágio no setor correspondente durante 2 anos (01/01/2017 - 30/12/2018) na Companhia de Água 
+         e Esgoto do Rio Grande do Norte (CAERN), atuou no cargo de supervisor administrativo durante 2 anos e 6 meses 
+         em VF SALÃO DE BELEZA LTDA (01/04/2019 - 17/09/2021), atualmente exerce o cargo de assessor administrativo na
+          Prefeitura Municipal de Montanhas-RN, desde 08/06/2021 e está cursando o 4º período do curso superior de Tecnologia 
+          em Sistemas para Internet pelo Instituto Federal de Educação, Ciências e Tecnologia do Rio Grande do Norte (IFRN).</p>
+
+    {% endblock %}
+</body>
+</html>

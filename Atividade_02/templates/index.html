@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    {% block conteudo %}
+
+    <p class="nome">José Moreira Chacon</p>
+    <p>IFRN</p>
+    <P>TSI</P>
+    <P>Des. de Sist. Corp.</P>
+
+    <p>
+        <img src="{% static 'imagens/loja.png' %}" alt="Fachada da loja" width="300" class="img-fluid">  
+    </p>
+    {% endblock %}
+</body>
+</html>

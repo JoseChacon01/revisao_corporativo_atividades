@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Áreas</h1>
+    <p><a href="{% url 'home' %}">Voltar para Home</a></p>
+    <p><a href="{% url 'area_cadastro' %}">Cadastrar nova Área</a></p>
+    
+    <p>Lista de Áreas Cadastradas</p>
+    {% for area in lista_areas %}
+        <p>{{area.nome}} |
+        <a href="{% url 'area_editar' area.id %}">EDITAR</a>
+        <a href="{% url 'area_remover' area.id %}">DELETAR</a></p>
+    {% empty %}
+    <p>Nenhuma área cadastrada</p>
+    {% endfor %}
+
+</body>
+</html>
